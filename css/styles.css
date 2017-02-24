@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+body {
+  font-family: "Montserrat", sans-serif; }
+
+.background-image {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: url("../img/bg.png");
+  background-size: cover;
+  z-index: -1;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px); }
+
+form.submitted.ng-invalid {
+  border: 1px solid #f00; }
+
+.container {
+  padding-top: 100px; }
+  .container input.ng-invalid {
+    border-color: red; }
+  .container .bg-white {
+    margin-top: 100px;
+    border-radius: 10px;
+    padding: 20px 30px;
+    color: #fff; }
+  .container form {
+    border-radius: 10px;
+    background-color: rgba(255, 250, 250, 0.5);
+    padding: 20px 30px; }
+  .container .error {
+    margin-top: 10px; }
+    .container .error p {
+      color: red; }

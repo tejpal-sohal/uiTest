@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="Tej Sohal">
+
+    <title>Pensions</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/boostrap.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/styles.css" rel="stylesheet">
+  </head>
+
+  <body ng-controller="mainCtrl">
+    <div class="background-image"></div>
+    <div class="container">
+      <div class="row">
+          <div class="col-xs-6 hidden-xs">
+            <div class="bg-white">
+              <h1>Register Company</h1>
+               <p>Free pension auto enrolment for business</p>
+                 <ul>
+                   <li>The UK's fastest one-stop solution.</li>
+                   <li> Free for employers. 100% secure.</li>
+                   <li>You could be compliant within minutes.</li>
+                 </ul>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <form name="createCompany" >
+                <div class="form-group">
+                    <label for="registration_number">Registration Number</label>
+                    <input type="text"  ng-model="registrationNumber" class="form-control" placeholder="registration number" >
+                </div>
+                <div class="form-group">
+                  <label for="sel1">Select list:</label>
+                    <select class="form-control" ng-model="legalStructure">
+                      <option value="" selected disabled>Please select</option>
+                       <option value="Limited Company">Limited Company</option>
+                       <option value="Limited Partnership">Limited Partnership</option>
+                       <option value="Limited Liability Partnership">Limited Liability Partnership</option>
+                       <option value="Unincorporated Association">Unincorporated Association</option>
+                       <option value="Ordinary Business Partnership">Ordinary Business Partnership</option>
+                       <option value="Sole Trader">Sole Trader</option>
+                       <option value="Charity">Charity</option>
+                       <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="name">Company Name</label>
+                    <input type="text" ng-model="name" class="form-control" id="name" placeholder="Company Name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Signatories Email</label>
+                    <input type="email" ng-model="signatoriesEmail" class="form-control" id="signatoriesEmail" placeholder="signatories Email">
+                </div>
+                <div class="form-group">
+                    <label for="signatoriesName">Signatories Name</label>
+                    <input type="text" ng-model="signatoriesName"  class="form-control" id=" signatories Name" placeholder="signatories Name">
+                </div>
+                <div class="form-group">
+                    <label for="signatoriesSurname">Signatories Surname</label>
+                    <input type="text" ng-model="signatoriesSurname"  class="form-control" id="signatories Surname" placeholder="signatories Surname">
+                </div>
+
+                <button type="submit" ng-click="press()" class="btn btn-primary">Register Company</button>
+                <div class="error" ng-repeat="i in e.errors">
+                  <p>{{i.title}}</p>
+                </div>
+            </form>
+          </div>
+      </div>
+    </div>
+
+    </div><!-- /.container -->
+
+    <script src="js/angular.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
